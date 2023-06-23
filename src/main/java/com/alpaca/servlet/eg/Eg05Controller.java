@@ -14,9 +14,9 @@ public class Eg05Controller extends HttpServlet{
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
-		request.setCharacterEncoding("utf-8");
-		
-		response.setCharacterEncoding("utf-8");
+//		request.setCharacterEncoding("utf-8");
+//		
+//		response.setCharacterEncoding("utf-8"); // not needed b/c filter
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
