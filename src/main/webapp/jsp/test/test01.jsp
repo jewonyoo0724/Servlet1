@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>test01</title>
 </head>
 <body>
 	
@@ -53,7 +53,7 @@
 		}
 	%>
 	
-	<h2>The sum from 1 to <%= n %> is <%= getSum(50) %>.</h2>
+	<h2>The sum from 1 to <%= n %> is <%= getSum(n) %>.</h2>
 	
 	<!-- 4 -->
 	
