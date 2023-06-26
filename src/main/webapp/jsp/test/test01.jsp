@@ -63,7 +63,7 @@
 		int age = 2023 - birthyear;
 	%>
 	
-	<h2>The age of <%= birthDate %> is <%= age %>.</h2>
+	<h2>If born on <%= birthDate %>, the age is <%= age %>.</h2>
 	
 </body>
 </html>
