@@ -41,9 +41,14 @@
     <%
     	String search =  request.getParameter("search");
     	
-    	double flag = 0.0;
+    	double flag;
     	
-    	if (request.getParameter("four-star").equals("on"))
+    	if (request.getParameter("four-star") == null)
+		{
+			flag = 0.0;
+		}
+		//if (request.getParameter("four-star").equals("on"))
+		else
     	{
     		flag = 4.0;
     	}
