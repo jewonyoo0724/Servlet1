@@ -63,10 +63,11 @@
 	
 	<%
 		String title = request.getParameter("title");
+		String id = request.getParameter("id");
 	
 		for (Map<String, Object> book : list)
 		{
-			if (title.replace('-',' ').equals(book.get("title").toString()))
+			if (title.replace('-',' ').equals(book.get("title").toString()) && id.equals(book.get("id").toString()))
 			{
 	%>
 		

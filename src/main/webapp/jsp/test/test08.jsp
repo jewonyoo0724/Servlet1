@@ -74,7 +74,7 @@
 		<tr>
 			<td><%= book.get("id").toString()%></td>
 			<td><img alt="cover" src=<%= book.get("image").toString() %> width="150" height="200"></td>
-			<td><a href=<%= "/Servlet1/jsp/test/test08_extension.jsp?title=" + book.get("title").toString().replace(' ', '-')%>>
+			<td><a href=<%= "/Servlet1/jsp/test/test08_extension.jsp?title=" + book.get("title").toString().replace(' ', '-') + "&id=" + book.get("id").toString()%>>
 			<%= book.get("title").toString() %></a></td>
 		</tr>
 	<%
