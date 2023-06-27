@@ -17,15 +17,13 @@
 		String fruit = request.getParameter("fruit");
 		//Stirng food = request.getParamter("food") only gives one value
 		//String[] foods = request.getParameterValues("foods");
-		List<String> foods = new ArrayList<String>();
-		foods = Arrays.asList(request.getParameterValues("foods"));
-		
+		List<String> foods = Arrays.asList(request.getParameterValues("food"));
 	%>
 	
 	
 	<h3>nickname: <%= nickname %></h3>
 	<h3>animal: <%= animal %></h3>
 	<h3>fruit: <%= fruit %></h3>
-	<h3>favorite foods: <%= foods%></h3>
+	<h3>favorite foods: <%= foods.toString() %></h3>
 </body>
 </html>
