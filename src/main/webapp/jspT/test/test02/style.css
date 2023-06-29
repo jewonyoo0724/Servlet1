@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+#wrap
+{
+	width:1200px;
+	margin:auto;
+}
+
+header
+{
+	height:100px;
+}
+
+.main-logo
+{
+	margin-bottom:0px;
+}
+
+menu
+{
+	height:50px;
+}
+
+.main-content
+{
+	
+}
+
+
+footer
+{
+	height:70px;
+}
+
+.banner-outer
+{
+	height:180px;
+}
+
+.banner-inner
+{
+	height:150px;
+	padding-left:15px;
+}
+
+.table-content
+{
+	text-align:center;
+}
