@@ -8,6 +8,13 @@
 <meta charset="UTF-8">
 <title>test02</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+	#wrap
+	{
+		width: 1200px;
+		margin: auto;
+	}
+</style>
 </head>
 <body>
 
@@ -19,33 +26,35 @@
 		ResultSet resultSet = mysqlService.select(sel_query);
 	%>
 	
-	<h2>Bookmarks</h2>
-	
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Website</th>
-				<th>Address</th>
-			</tr>
-		</thead>
-		<tbody>
-		
-		<%
-			while (resultSet.next())
-			{
-		%>
-			<tr>
-				<td><%=resultSet.getString("name") %></td>
-				<td><a href=<%=resultSet.getString("url") %>><%=resultSet.getString("url") %></a></td>
-				<td><a href="/Servlet1/db/user/delete_test02?id=<%= resultSet.getInt("id") %>">Delete</a></td>
-			</tr>
-		
-		<%
-			}
-		%>
-		
-		</tbody>
-	</table>
+	<div id="wrap" class="pt-3">
+		<h2>Bookmarks</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Website</th>
+					<th>Address</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			<%
+				while (resultSet.next())
+				{
+			%>
+				<tr>
+					<td><%=resultSet.getString("name") %></td>
+					<td><a href=<%=resultSet.getString("url") %>><%=resultSet.getString("url") %></a></td>
+					<td><a href="/Servlet1/db/user/delete_test02?id=<%= resultSet.getInt("id") %>" class="btn btn-danger">Delete</a></td>
+				</tr>
+			
+			<%
+				}
+			%>
+			
+			</tbody>
+		</table>
+		<a href="/Servlet1/database/test/user_input.jsp" class="btn btn-success">Add Bookmark</a>
+	</div>
 	
 	
 	
